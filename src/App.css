@@ -1,0 +1,122 @@
+ 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family:"Arial Black", Gadget, sans-serif;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to right, #eeb059, rgb(251, 171, 144)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  text-align: center;
+
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+.container {
+  padding: 0 1rem;
+}
+
+.btn {
+  display: inline-block;
+  border: none;
+  background: #555;
+  color: #fff;
+  padding: 7px 20px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #666;
+}
+
+
+.toDoList{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+
+
+
+/* Animation */
+
+.removed-item {
+  animation: removed-item-animation 1s cubic-bezier(0.55, -0.04, 0.91, 0.94) forwards;
+  /*transform origin is moved to the bottom left corner*/
+  transform-origin: 0% 70%;
+}
+
+@keyframes removed-item-animation {
+  0% {
+      opacity: 1;
+      transform: rotateZ(0);
+}
+
+  100% {
+      opacity: 0;
+      transform: translateY(40%) rotateZ(90deg);
+  }
+}
+
+
+.toDoForm{
+  width: 70%;
+}
+select{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+}
+.select{
+  position: relative;
+  overflow: hidden;
+  background-color: #fff;
+  margin-left: 10px;
+  width: 30%;
+}
+select{
+  width: 100%;
+  height: 100%;
+  color:#ee7455;
+  cursor: pointer;
+  padding: 5px;
+  background-color: #fff;
+}
+
+.select::after{
+  content: "\25BC";
+  color:#fff;
+  position: absolute;
+  background-color: #ee7455;
+  padding:10px;
+  pointer-events: none;
+  top:0px;
+  right: 0px;
+  bottom: 0px;
+  
+}
+.toDoAddSearchDiv{
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  display: flex;
+  margin-bottom: 60px;
+}
+.toDoInputBox{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border:none ;
+  outline:none ;
+  width:85%;
+  height:35px;
+}
